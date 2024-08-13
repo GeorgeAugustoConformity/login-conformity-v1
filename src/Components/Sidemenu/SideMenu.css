@@ -1,0 +1,84 @@
+/* Side Menu Container */
+.side-menu {
+    width: 200px;
+    background-color: var( --background-color); /* Deep Blue */
+    color: var(--text-color); /* Light Text Color */
+    height: 100vh;
+    padding-top: 19px;
+    position: fixed;
+    top: 3.75em;
+    left: 0;
+    z-index: 1;
+    border-right: 1px solid #1a1a1a;
+    opacity: 95%;
+}
+
+/* Show the side menu when toggled */
+.side-menu.active {
+    transform: translateX(0);
+}
+
+/* List styling */
+.side-menu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* List items styling */
+.side-menu ul li {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Link styling */
+.side-menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    padding: 15px 20px;
+    transition: 0.3s ease;
+    letter-spacing: -.5px;
+}
+
+/* Active link styling */
+.side-menu ul li a.active {
+    background-color: #2f4b6c; /* Brighter blue for active link */
+    color: #ffffff;
+    padding-left: 25px;
+}
+
+.side-menu ul li a.active:hover {
+    color: #fff;
+}
+
+.side-menu ul li a:hover {
+    color: var(--main-blue);
+}
+
+.side-menu .icon {
+    transform: translateY(5px);
+    margin-bottom: 3px;
+    margin-right: 6px;
+}
+
+/*!* Responsive side menu toggle button *!*/
+/*.menu-toggle {*/
+/*    position: fixed;*/
+/*    top: 20px;*/
+/*    left: 20px;*/
+/*    cursor: pointer;*/
+/*    z-index: 1000;*/
+/*}*/
+
+/*!* Icon for the toggle button *!*/
+/*.menu-toggle i {*/
+/*    color: #2c3e50; !* Deep Blue *!*/
+/*    font-size: 24px;*/
+/*    transition: color 0.3s ease;*/
+/*}*/
+
+/*!* Change toggle button color on hover *!*/
+/*.menu-toggle:hover i {*/
+/*    color: #2980b9; !* Brighter blue on hover *!*/
+/*}*/

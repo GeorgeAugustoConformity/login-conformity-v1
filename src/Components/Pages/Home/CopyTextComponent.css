@@ -1,0 +1,20 @@
+.copy-text-component {
+    margin-top: 10px;
+    position: fixed;
+    top: 6.5em;
+    left: 35.2em;
+}
+
+.copy-text-component button {
+    padding: 5px 10px;
+    background-color: #2f4b6c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-text-component button:hover {
+    background-color: #4771a4;
+}
