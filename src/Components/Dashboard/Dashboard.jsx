@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route, NavLink} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Header from '../Header/Header';
 import SideMenu from '../Sidemenu/SideMenu';
 import Home from '../Pages/Home/Home';
@@ -7,7 +7,6 @@ import Profile from '../Pages/Profile/Profile';
 import Settings from '../Pages/Settings/Settings';
 import Reports from '../Pages/Reports/Reports';
 import './Dashboard.css'
-import bg from '../Assets/bg2.jpg'
 
 const Dashboard = () => {
     return (
