@@ -1,0 +1,14 @@
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--text-color);
+    top: .4em;
+    right: 2.5em;
+    position: fixed;
+}
+
+.theme-toggle svg {
+    vertical-align: middle;
+}

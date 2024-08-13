@@ -1,17 +1,16 @@
 /* Side Menu Container */
 .side-menu {
     width: 200px;
-    background-color: #333; /* Deep Blue */
-    color: #ecf0f1; /* Light Text Color */
+    background-color: var( --background-color); /* Deep Blue */
+    color: var(--text-color); /* Light Text Color */
     height: 100vh;
     padding-top: 19px;
     position: fixed;
     top: 3.75em;
     left: 0;
-    /*transform: translateX(-250px); !* Initially hide off-screen *!*/
-    transition: transform 0.3s ease, background-color 0.3s ease;
     z-index: 1;
     border-right: 1px solid #1a1a1a;
+    opacity: 95%;
 }
 
 /* Show the side menu when toggled */
@@ -28,32 +27,33 @@
 
 /* List items styling */
 .side-menu ul li {
-    /*padding: 10px 20px;*/
-    /*border-radius: 5px;*/
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Link styling */
 .side-menu ul li a {
-    color: #ecf0f1;
+    color: var(--text-color);
     text-decoration: none;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     padding: 15px 20px;
     transition: 0.3s ease;
-}
-
-/* Hover effect for list items */
-.side-menu ul li:hover {
-    background-color: #34495e; /* Slightly lighter deep blue */
-    /*transform: scale(1.02); !* Slightly enlarge on hover *!*/
+    letter-spacing: -.5px;
 }
 
 /* Active link styling */
 .side-menu ul li a.active {
-    background-color: #2f526c; /* Brighter blue for active link */
+    background-color: #2f4b6c; /* Brighter blue for active link */
     color: #ffffff;
-    padding-left: 35px;
+    padding-left: 25px;
+}
+
+.side-menu ul li a.active:hover {
+    color: #fff;
+}
+
+.side-menu ul li a:hover {
+    color: #2e74cc;
 }
 
 .side-menu .icon {
