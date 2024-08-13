@@ -1,0 +1,38 @@
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid #3f3f3f;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header button {
+    padding: 10px 15px;
+}
+
+.header .logo {
+    width: 35px;
+}
+
+.header .logout-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header .logout-button:hover {
+    color: #ff2a2a;
+}
