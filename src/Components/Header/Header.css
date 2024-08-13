@@ -30,6 +30,7 @@
 .header .logo {
     width: 35px;
     margin-left: .8em;
+    filter: brightness(130%) hue-rotate(-20deg) saturate(.6);
 }
 
 .header .logout-button {

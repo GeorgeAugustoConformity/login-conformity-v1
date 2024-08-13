@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import { useAuth } from '../../context/AuthContext';
 import logo from '../../Components/Assets/header-logo.png';
-import logoBlue from '../../Components/Assets/logo-blue-alone.png';
+import logoBlue from '../../Components/Assets/logo-blue-new.png';
 import { MdOutlineLogout } from "react-icons/md";
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import { useTheme } from '../../context/ThemeContext';

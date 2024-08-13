@@ -15,7 +15,7 @@ const LoginForm = () => {
         // Simple authentication check (you should replace this with real authentication)
         if (username === 'nanda' && password === 'nanda') {
             localStorage.setItem('isAuthenticated', 'true');
-            navigate('/dashboard'); // Redirect to dashboard
+            navigate('/dashboard/home'); // Redirect to dashboard
             window.location.reload();
         } else {
             alert('Invalid credentials');
