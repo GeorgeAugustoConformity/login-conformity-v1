@@ -1,9 +1,9 @@
 // src/Components/LoginForm/LoginForm.js
 import React, { useState } from 'react';
-import './LoginForm.css';
-import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { FaUser, FaLock } from "react-icons/fa";
 import logo from '../../Components/Assets/login-logo-white.png';
+import './LoginForm.css';
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
@@ -12,11 +12,11 @@ const LoginForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simple authentication check (you should replace this with real authentication)
+        // todo auth api
         if (username === 'nanda' && password === 'nanda') {
             localStorage.setItem('isAuthenticated', 'true');
-            navigate('/dashboard/home'); // Redirect to dashboard
-            window.location.reload();
+            navigate('/dashboard/home'); //
+            // window.location.reload();
         } else {
             alert('Invalid credentials');
         }
