@@ -7,7 +7,7 @@ const ThemeToggle = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <button className="theme-toggle" onClick={toggleTheme}>
+        <button title="Mudar tema"  className="theme-toggle" onClick={toggleTheme}>
             {theme === 'light' ? <FaMoon /> : <FaSun />}
         </button>
     );
