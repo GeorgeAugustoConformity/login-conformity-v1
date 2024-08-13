@@ -24,7 +24,7 @@
 }
 
 .header button {
-    padding: 10px 15px;
+    /*padding: 10px 15px;*/
 }
 
 .header .logo {
@@ -37,15 +37,20 @@
     background: none;
     border: none;
     color: var(--text-color);
-    font-size: 24px;
     cursor: pointer;
 }
 
-.header .logout-button:hover {
+.header .logout-button svg:hover {
     color: #ff2a2a;
 }
 
-.header .icon i {
-    position: fixed;
-    top: 0;
+.header .right-icons {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.header .right-icons svg {
+    font-size: 1.3em;
 }
