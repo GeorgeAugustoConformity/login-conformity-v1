@@ -8,7 +8,7 @@ import {HiOutlineDocumentReport} from "react-icons/hi";
 import {RiSurveyLine} from "react-icons/ri";
 
 const SideMenu = () => {
-    return (
+     return (
         <nav className="side-menu">
             <ul>
                 <li>
