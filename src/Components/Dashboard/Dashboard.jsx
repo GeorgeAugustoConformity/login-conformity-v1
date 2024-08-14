@@ -8,6 +8,7 @@ import Settings from '../Pages/Settings/Settings';
 import Reports from '../Pages/Reports/Reports';
 import './Dashboard.css'
 import Inspections from "../Pages/Inspections/Inspections";
+import Footer from "../Footer/Footer";
 
 const Dashboard = () => {
     return (
@@ -26,6 +27,7 @@ const Dashboard = () => {
                         <Route path="inspections" element={<Inspections/>}/>
                         <Route path="/" element={<Home/>}/> {/* Default route */}
                     </Routes>
+                    {/*<Footer/>*/}
                 </div>
             </div>
         </div>
