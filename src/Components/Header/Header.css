@@ -1,56 +1,51 @@
+/* Container Styles */
 .header {
-    background-color: var(--background-color);
-    /*color: white;*/
-    /*padding: 20px;*/
-    /*text-align: center;*/
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color); /* Header background */
+    border-bottom: 1px solid var(--gray-darkest); /* Bottom border */
+    /*box-shadow: 0 2px 10px var(--gray-darker); !*todo*!*/
     display: flex;
-    /*justify-content: space-between;*/
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    border-bottom: 1px solid #3f3f3f;
-    /*background-color: #333;*/
-    color: #fff;
-    padding: 15px;
-    text-align: center;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    z-index: 999;
+    text-align: center;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.header button {
-    /*padding: 10px 15px;*/
-}
-
+/* Logo Styles */
 .header .logo {
     width: 35px;
-    margin-left: .8em;
-    filter: brightness(130%) hue-rotate(-20deg) saturate(.6);
+    margin-left: 0.8em;
+    filter: brightness(130%) hue-rotate(-20deg) saturate(0.6); /* Logo effect */
 }
 
+/* Right Icons Container */
+.header .right-icons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-right: 1em;
+}
+
+/* Icon Styles */
+.header .right-icons svg {
+    font-size: 1.3em;
+    color: var(--gray-darker); /* Default color */
+}
+
+.header .right-icons svg:hover {
+    color: var(--main-blue); /* Hover effect */
+}
+
+/* Logout Button Styles */
 .header .logout-button {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--text-color); /* Button color */
     cursor: pointer;
 }
 
 .header .logout-button svg:hover {
-    color: #ff2a2a;
-}
-
-.header .right-icons {
-    margin-right: 1em;
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
-
-.header .right-icons svg {
-    font-size: 1.3em;
+    color: var(--error-color); /* Hover effect */
 }
