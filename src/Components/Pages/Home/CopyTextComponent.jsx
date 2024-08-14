@@ -1,8 +1,8 @@
 import React from 'react';
 import './CopyTextComponent.css';
-import { FaCopy } from "react-icons/fa6";
+import {FaCopy} from "react-icons/fa6";
 
-const CopyTextComponent = ({ textRef }) => {
+const CopyTextComponent = ({textRef}) => {
     const copyText = () => {
         const text = textRef.current.innerText;
 
