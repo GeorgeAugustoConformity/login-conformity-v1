@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
+import React, {useRef} from 'react';
 import './Home.css';
-import CopyTextComponent from './CopyTextComponent.jsx';
+// import CopyTextComponent from './CopyTextComponent.jsx';
 
 const Home = () => {
     const textRef = useRef(null);
