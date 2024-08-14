@@ -44,8 +44,32 @@
     border: none;
     color: var(--text-color); /* Button color */
     cursor: pointer;
+    font-size: 16px;
 }
 
 .header .logout-button svg:hover {
     color: var(--error-color); /* Hover effect */
 }
+
+/* Date and Time Container Styles */
+.header .date-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Adjust alignment if necessary */
+    margin: 0 1em;
+}
+
+/* Date Styles */
+.header .date {
+    font-size: 0.9em; /* Adjust size if needed */
+    color: var(--text-color); /* Color of the date text */
+}
+
+/* Time Styles */
+.header .time {
+    font-size: 1em; /* Adjust size if needed */
+    color: var(--text-color); /* Color of the time text */
+    font-weight: bold;
+}
+
+
