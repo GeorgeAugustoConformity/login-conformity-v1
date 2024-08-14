@@ -1,0 +1,14 @@
+.footer {
+    /*background: #333;*/
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 92%;
+    bottom: 0;
+    margin-left: 10em;
+}
+
+.footer-content {
+    margin-bottom: 30px; /* Adjust space above ticker */
+}
