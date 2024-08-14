@@ -1,7 +1,7 @@
 // src/Components/LoginForm/LoginForm.js
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaUser, FaLock } from "react-icons/fa";
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {FaUser, FaLock} from "react-icons/fa";
 import logo from '../../Components/Assets/login-logo-white.png';
 import './LoginForm.css';
 
@@ -48,7 +48,7 @@ const LoginForm = () => {
                         <FaLock className="icon"/>
                     </div>
                     <div className="remember-forgot">
-                        <label><input type="checkbox"/>Lembre-se de mim</label>
+                        <label><input type="checkbox"/>Manter conectado</label>
                         <a href="#">Esqueceu a senha?</a>
                     </div>
                     <button type="submit">Entrar</button>
