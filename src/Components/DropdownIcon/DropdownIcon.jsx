@@ -38,7 +38,7 @@ const DropdownIcon = () => {
 
     return (
         <div className="dropdown-icon" ref={dropdownRef}>
-            <FaUserCircle onClick={toggleDropdown} className="icon" />
+            <FaUserCircle title="Minha Conta" onClick={toggleDropdown} className="icon" />
             {isOpen && (
                 <div className="dropdown-menu">
                     <ul>
