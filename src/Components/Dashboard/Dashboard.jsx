@@ -9,6 +9,7 @@ import Reports from '../Pages/Reports/Reports';
 import './Dashboard.css'
 import Inspections from "../Pages/Inspections/Inspections";
 import Footer from "../Footer/Footer";
+import ProtectedRoute from "./ProtectedRoute";
 
 const Dashboard = () => {
     return (
@@ -20,15 +21,12 @@ const Dashboard = () => {
                 </nav>
                 <div className="content">
                     <Routes>
-                        <Route path="home" element={<Home/>}/>
-                        <Route path="profile" element={<Profile/>}/>
-                        <Route path="settings" element={<Settings/>}/>
-                        <Route path="reports" element={<Reports/>}/>
-                        <Route path="inspections" element={<Inspections/>}/>
-
-
-                        {/*Default index Route*/}
-                        <Route path="/" element={<Home/>}/> {/* Default route */}
+                        <Route path="/" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
+                        <Route path="home" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
+                        <Route path="profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
+                        <Route path="settings" element={<ProtectedRoute><Settings/></ProtectedRoute>}/>
+                        <Route path="reports" element={<ProtectedRoute><Reports/></ProtectedRoute>}/>
+                        <Route path="inspections" element={<ProtectedRoute><Inspections/></ProtectedRoute>}/>
                     </Routes>
                     <Footer/>
                 </div>
