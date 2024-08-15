@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContextMenu.css'; // Import the CSS for styling
 
-const ContextMenu = ({ items, position, visible, onClose }) => {
+const ContextMenu = ({items, position, visible, onClose}) => {
     React.useEffect(() => {
         const handleClick = (e) => {
             if (visible && !e.target.closest('.context-menu')) {
@@ -16,7 +16,7 @@ const ContextMenu = ({ items, position, visible, onClose }) => {
     if (!visible) return null;
 
     return (
-        <div className="context-menu" style={{ top: position.y, left: position.x }}>
+        <div className="context-menu" style={{top: position.y, left: position.x}}>
             {items.map((item, index) => (
                 <div
                     key={index}
