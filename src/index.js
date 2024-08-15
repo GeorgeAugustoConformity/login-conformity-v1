@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { DevSupport } from "@react-buddy/ide-toolbox";
-import { ComponentPreviews, useInitial } from "./dev";
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "./dev";
 
 // Create a root element
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -44,7 +44,7 @@ document.addEventListener('contextmenu', (e) => {
 root.render(
     <React.StrictMode>
         <DevSupport ComponentPreviews={ComponentPreviews} useInitialHook={useInitial}>
-            <App />
+            <App/>
         </DevSupport>
     </React.StrictMode>
 );
