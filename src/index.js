@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "./dev";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,13 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.webkitUserDrag = 'none'; // Prevent image dragging in WebKit browsers
 });
 
-    // Prevent context menu of opening
+// Prevent context menu of opening
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
 
 root.render(
     <React.StrictMode>
-        <App/>
+        <DevSupport ComponentPreviews={ComponentPreviews}
+                    useInitialHook={useInitial}
+        >
+            <App/>
+        </DevSupport>
     </React.StrictMode>
 );
