@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import './Home.css';
-// import CopyTextComponent from './CopyTextComponent.jsx';
+import Programacao from "../../Programacao/Programacao";
+import '../../Programacao/Programacao.css'
 
 const Home = () => {
     const textRef = useRef(null);
@@ -10,6 +11,7 @@ const Home = () => {
             <h2>Dashboard</h2>
             <p ref={textRef}>Welcome to the jungle!</p>
             {/*<CopyTextComponent textRef={textRef} />*/}
+            {/*<Programacao/>*/}
         </div>
     );
 }
