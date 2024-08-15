@@ -1,0 +1,47 @@
+.programacao-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #e0f0ff; /* Light background for the form */
+    padding: 20px;
+    border: 1px solid #2f4b6c; /* Primary Color for border */
+    border-radius: 5px;
+}
+
+.programacao-form label {
+    font-family: "Courier New", Courier, monospace;
+    color: #2f4b6c; /* Primary Color for text */
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.programacao-form input {
+    background-color: #ffffff; /* White background for inputs */
+    color: #2f4b6c; /* Primary Color for text */
+    border: 1px solid #4a6d85; /* Light Shade for input borders */
+    padding: 8px;
+    border-radius: 3px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+}
+
+.programacao-form input:focus {
+    outline: none;
+    border-color: #2f4b6c; /* Primary Color on focus */
+}
+
+.programacao-form button {
+    background-color: #2f4b6c; /* Primary Color for button */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.programacao-form button:hover {
+    background-color: #4a6d85; /* Light Shade on hover */
+}

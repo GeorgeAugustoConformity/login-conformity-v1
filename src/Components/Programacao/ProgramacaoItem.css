@@ -1,0 +1,33 @@
+.programacao-item {
+    background-color: #ffffff; /* White background for better contrast */
+    border: 1px solid #2f4b6c; /* Primary Color for border */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.programacao-item p {
+    margin: 0;
+    color: #2f4b6c; /* Primary Color for text */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+}
+
+.programacao-item button {
+    background-color: #2f4b6c; /* Primary Color for button */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.programacao-item button:hover {
+    background-color: #4a6d85; /* Light Shade on hover */
+}

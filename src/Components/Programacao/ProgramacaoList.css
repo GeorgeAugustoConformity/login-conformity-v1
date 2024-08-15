@@ -1,0 +1,23 @@
+.programacao-list {
+    background-color: #ffffff; /* White background for better contrast */
+    padding: 15px;
+    border: 1px solid #2f4b6c; /* Primary Color for border */
+    border-radius: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+/* Custom Scrollbar */
+.programacao-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.programacao-list::-webkit-scrollbar-thumb {
+    background-color: #2f4b6c; /* Primary Color for scrollbar thumb */
+    border-radius: 5px;
+}
+
+.programacao-list::-webkit-scrollbar-thumb:hover {
+    background-color: #4a6d85; /* Light Shade on hover */
+}
