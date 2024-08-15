@@ -10,7 +10,6 @@
     z-index: 1;
     border-right: 1px solid #1a1a1a; /* Original border color */
     opacity: 80%;
-
 }
 
 /* Active Side Menu (Shown when toggled) */
@@ -27,7 +26,6 @@
 
 /* List Items Styling */
 .side-menu ul li {
-
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -64,6 +62,60 @@
     transform: translateY(5px);
     margin-bottom: 3px;
     margin-right: 6px;
+}
+
+/* Expandable Menu Header */
+.expandable-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Arrow Icon Styling */
+.arrow-icon {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when expanded */
+.expandable-menu.expanded .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Expanded Menu Container */
+.expanded-menu {
+    list-style: none;
+    padding-left: 20px; /* Indent the nested menu */
+    margin: 0;
+}
+
+/* Show expanded menu when active */
+.expandable-menu.expanded .expanded-menu {
+    display: block;
+}
+
+/* Expanded Menu Link Styling */
+.expanded-menu li a {
+    color: var(--text-color); /* Default link color */
+    padding: 10px 20px;
+    font-size: 13px;
+    display: block;
+    transition: 0.3s ease;
+}
+
+/* Active Expanded Menu Link Styling */
+.expanded-menu li a.active {
+    background-color: #2f4b6c; /* Active link background color */
+    color: #ffffff; /* Active link text color */
+}
+
+/* Hover Effect for Expanded Menu Links */
+.expanded-menu li a:hover {
+    color: #ffffff; /* Adjust color on hover */
+    background-color: #2f4b6c; /* Background color on hover */
 }
 
 /* Responsive Side Menu Toggle Button */
