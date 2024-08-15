@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="footer-content">
                 {/* Other footer content */}
             </div>
-            <NewsTicker />
+            <NewsTicker/>
         </footer>
     );
 };
