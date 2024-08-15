@@ -10,6 +10,24 @@
     z-index: 1;
     border-right: 1px solid #1a1a1a; /* Original border color */
     opacity: 80%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    /*scrollbar-width: thin; !* For Firefox *!*/
+    scrollbar-color: var(--text-color) var(--background-color); /* For Firefox */
+    padding-bottom: 5em;
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+.side-menu::-webkit-scrollbar {
+    /*width: 8px;*/
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+    background-color: var(--text-color); /* Thumb color */
+    border-radius: 10px;
+}
+
+.side-menu::-webkit-scrollbar-track {
+    background-color: var(--background-color); /* Track color */
 }
 
 /* Active Side Menu (Shown when toggled) */
@@ -34,15 +52,15 @@
     color: var(--text-color); /* Original link color */
     text-decoration: none;
     display: block;
-    font-size: 14px;
-    padding: 15px 20px;
+    /*font-size: 14px;*/
+    padding: 10px 20px;
     transition: 0.3s ease;
     /*letter-spacing: -0.5px;*/
 }
 
 /* Active Link Styling */
 .side-menu ul li a.active {
-    background-color: #2f4b6c; /* Original active link background color */
+    background-color: #445059; /* Original active link background color */
     color: #ffffff; /* Original active link text color */
     padding-left: 25px;
 }
@@ -59,6 +77,7 @@
 
 /* Icon Styling */
 .side-menu .icon {
+    color: var(--text-color);
     transform: translateY(5px);
     margin-bottom: 3px;
     margin-right: 6px;
@@ -66,17 +85,29 @@
 
 /* Expandable Menu Header */
 .expandable-menu-header {
+    gap: .7em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.icon-text-container {
+    display: flex;
+    align-items: center;
+    gap: .7em; /* This keeps the gap between icon and text */
+}
+
+.arrow-icon {
+    margin-left: auto;
 }
 
 /* Arrow Icon Styling */
 .arrow-icon {
     font-size: 16px;
+    color: var(--text-color);
     transition: transform 0.3s ease;
 }
 
@@ -99,7 +130,7 @@
 
 /* Expanded Menu Link Styling */
 .expanded-menu li a {
-    color: var(--text-color); /* Default link color */
+    color: var(--gray-light); /* Default link color */
     padding: 10px 20px;
     font-size: 13px;
     display: block;
@@ -115,29 +146,21 @@
 /* Hover Effect for Expanded Menu Links */
 .expanded-menu li a:hover {
     color: #ffffff; /* Adjust color on hover */
-    background-color: #2f4b6c; /* Background color on hover */
+    /*background-color: #2f4b6c; !* Background color on hover *!*/
 }
 
-/* Responsive Side Menu Toggle Button */
-/*
-.menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 1000;
-} */
+.expandable-menu span {
+    /*color: var(--text-color);*/
+}
 
-/* Icon for the Toggle Button */
-/*
-.menu-toggle i {
-    color: #2c3e50;
-    font-size: 24px;
-    transition: color 0.3s ease;
-} */
+.expandable-menu .span-title {
+    color: var(--text-color);
+}
 
-/* Change Toggle Button Color on Hover */
-/*
-.menu-toggle:hover i {
-    color: #2980b9;
-} */
+.expandable-menu span:active {
+    color: var(--text-color);
+}
+
+.expandable-menu .icon-expandable {
+    color: var(--text-color);
+}
