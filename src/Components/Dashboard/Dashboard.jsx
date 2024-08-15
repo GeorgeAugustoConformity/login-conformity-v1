@@ -25,9 +25,12 @@ const Dashboard = () => {
                         <Route path="settings" element={<Settings/>}/>
                         <Route path="reports" element={<Reports/>}/>
                         <Route path="inspections" element={<Inspections/>}/>
+
+
+                        {/*Default index Route*/}
                         <Route path="/" element={<Home/>}/> {/* Default route */}
                     </Routes>
-                    {/*<Footer/>*/}
+                    <Footer/>
                 </div>
             </div>
         </div>
