@@ -1,8 +1,32 @@
+/* Default (Light Theme) */
+:root {
+    --header-background-color: rgba(255, 255, 255, 0.5); /* Light theme background color */
+    --header-border-color: var(--gray-darkest); /* Border color for light theme */
+    --header-shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color for light theme */
+    --icon-color: var(--gray-darker); /* Default color for icons */
+    --icon-hover-color: var(--main-blue); /* Hover color for icons */
+    --logout-button-color: var(--text-color); /* Logout button color for light theme */
+    --logout-button-hover-color: var(--error-color); /* Hover color for logout button */
+    --date-time-color: var(--text-color); /* Color for date and time text */
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+    --header-background-color: rgba(0, 0, 0, 0.62); /* Dark theme background color */
+    --header-border-color: var(--gray-darkest); /* Border color for dark theme */
+    --header-shadow-color: rgba(0, 0, 0, 0.3); /* Shadow color for dark theme */
+    --icon-color: var(--gray-light); /* Default color for icons */
+    /*--icon-hover-color: var(--main-light-blue); !* Hover color for icons *!*/
+    /*--logout-button-color: var(--text-light-color); !* Logout button color for dark theme *!*/
+    /*--logout-button-hover-color: var(--error-light-color); !* Hover color for logout button *!*/
+    /*--date-time-color: var(--text-light-color); !* Color for date and time text *!*/
+}
+
 /* Container Styles */
 .header {
-    background-color: var(--background-color); /* Header background */
-    border-bottom: 1px solid var(--gray-darkest); /* Bottom border */
-    /*box-shadow: 0 2px 10px var(--gray-darker); !*todo*!*/
+    background-color: var(--header-background-color); /* Dynamic background color based on theme */
+    border-bottom: 1px solid var(--header-border-color); /* Bottom border */
+    box-shadow: 0 2px 10px var(--header-shadow-color); /* Subtle shadow for depth */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,6 +35,8 @@
     padding: 15px;
     z-index: 999;
     text-align: center;
+    backdrop-filter: blur(8px); /* Blur effect for the background */
+    -webkit-backdrop-filter: blur(8px); /* Vendor prefix for Safari */
 }
 
 /* Logo Styles */
@@ -31,24 +57,24 @@
 /* Icon Styles */
 .header .right-icons svg {
     font-size: 1.3em;
-    color: var(--gray-darker); /* Default color */
+    color: var(--icon-color); /* Default color */
 }
 
 .header .right-icons svg:hover {
-    color: var(--main-blue); /* Hover effect */
+    color: var(--icon-hover-color); /* Hover effect */
 }
 
 /* Logout Button Styles */
 .header .logout-button {
     background: none;
     border: none;
-    color: var(--text-color); /* Button color */
+    color: var(--logout-button-color); /* Logout button color */
     cursor: pointer;
     font-size: 14px;
 }
 
 .header .logout-button svg:hover {
-    color: var(--error-color); /* Hover effect */
+    color: var(--logout-button-hover-color); /* Hover effect */
 }
 
 /* Date and Time Container Styles */
@@ -62,14 +88,12 @@
 /* Date Styles */
 .header .date {
     font-size: 0.9em; /* Adjust size if needed */
-    color: var(--text-color); /* Color of the date text */
+    color: var(--date-time-color); /* Color of the date text */
 }
 
 /* Time Styles */
 .header .time {
     font-size: 1em; /* Adjust size if needed */
-    color: var(--text-color); /* Color of the time text */
+    color: var(--date-time-color); /* Color of the time text */
     font-weight: bold;
 }
-
-

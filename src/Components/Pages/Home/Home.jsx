@@ -8,10 +8,10 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h2>Dashboard</h2>
-            <p ref={textRef}>Welcome to the jungle!</p>
+            {/*<h2>Dashboard</h2>*/}
+            {/*<p ref={textRef}>Welcome to the jungle!</p>*/}
             {/*<CopyTextComponent textRef={textRef} />*/}
-            {/*<Programacao/>*/}
+            <Programacao/>
         </div>
     );
 }

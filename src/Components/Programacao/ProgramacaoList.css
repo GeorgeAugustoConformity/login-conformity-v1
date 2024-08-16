@@ -1,11 +1,12 @@
 .programacao-list {
-    background-color: #ffffff; /* White background for better contrast */
+    background-color: var(--background-color); /* Consistent background color */
     padding: 15px;
-    border: 1px solid #2f4b6c; /* Primary Color for border */
-    border-radius: 5px;
-    max-height: 400px;
-    overflow-y: auto;
-    margin-top: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Match border style with profile */
+    border-radius: 8px; /* Match border radius with profile */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match shadow style with profile */
+    min-width: 700px; /* Maintain the minimum width */
+    max-height: 500px; /* Ensure content does not overflow */
+    overflow-y: auto; /* Enable scrolling if content exceeds max height */
 }
 
 /* Custom Scrollbar */

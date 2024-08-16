@@ -44,12 +44,12 @@ code {
     --primary-dark: #2e86c1;
 
     /* Secondary Colors */
-    --secondary-color: #e67e22;
-    --secondary-light: #f39c12;
+    --secondary-color: #e67422;
+    --secondary-light: #f36512;
     --secondary-dark: #d35400;
 
     /* Accent Colors */
-    --accent-color: #e74c3c;
+    --accent-color: #ff4000;
     --accent-light: #f1948a;
     --accent-dark: #c0392b;
 
@@ -79,7 +79,7 @@ code {
     --background-light: #ffffff;
     --background-dark: #bdc3c7;
 
-    /* Button Colors */
+    /* FullscreenButton Colors */
     --button-background: #2980b9;
     --button-background-hover: #2471a3;
     --button-text: #ffffff;
@@ -88,7 +88,7 @@ code {
 [data-theme='dark'] {
     --background-color: #333;
     --text-color: #c0c0c0;
-    --main-blue: #ffffff;
+    --main-blue: #9d9d9d;
 
     /* Link and Hover */
     --link-color: #b0b0b0; /* Default link color in dark mode (Lighter Gray) */
@@ -105,12 +105,12 @@ code {
     --primary-dark: #16a085;
 
     /* Secondary Colors */
-    --secondary-color: #f39c12;
-    --secondary-light: #f1c40f;
-    --secondary-dark: #e67e22;
+    --secondary-color: #f37012;
+    --secondary-light: #f1780f;
+    --secondary-dark: #ffa161;
 
     /* Accent Colors */
-    --accent-color: #e74c3c;
+    --accent-color: #ef4b18;
     --accent-light: #ec7063;
     --accent-dark: #c0392b;
 
@@ -140,7 +140,7 @@ code {
     --background-light: #2c3e50;
     --background-dark: #34495e;
 
-    /* Button Colors */
+    /* FullscreenButton Colors */
     --button-background: #2980b9;
     --button-background-hover: #1f618d;
     --button-text: #ffffff;

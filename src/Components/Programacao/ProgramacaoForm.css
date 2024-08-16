@@ -2,15 +2,16 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: #e0f0ff; /* Light background for the form */
+    background-color: var(--background-color); /* Light background for the form */
     padding: 20px;
-    border: 1px solid #2f4b6c; /* Primary Color for border */
-    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Match border style with profile */
+    border-radius: 8px; /* Match border radius with profile */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match shadow with profile */
 }
 
 .programacao-form label {
     font-family: "Courier New", Courier, monospace;
-    color: #2f4b6c; /* Primary Color for text */
+    color: var(--text-color); /* Primary Color for text */
     font-size: 14px;
     display: flex;
     flex-direction: column;
@@ -21,7 +22,7 @@
     color: #2f4b6c; /* Primary Color for text */
     border: 1px solid #4a6d85; /* Light Shade for input borders */
     padding: 8px;
-    border-radius: 3px;
+    border-radius: 5px; /* Adjusted to match form style */
     font-family: "Courier New", Courier, monospace;
     font-size: 14px;
 }

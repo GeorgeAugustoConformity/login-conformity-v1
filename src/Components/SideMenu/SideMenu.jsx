@@ -8,11 +8,11 @@ import {GiSpy} from "react-icons/gi";
 import {GrCertificate} from "react-icons/gr";
 import {IoDocumentSharp} from "react-icons/io5";
 import {FaMoneyCheckDollar} from "react-icons/fa6";
-import {MdOutlineSupportAgent} from "react-icons/md";
+import {MdManageAccounts, MdOutlineSupportAgent} from "react-icons/md";
+import {FaUserCircle} from "react-icons/fa";
 
 const SideMenu = () => {
-    const [expandedMenus, setExpandedMenus] = useState({});
-
+    const [expandedMenus, setExpandedMenus] = useState({userProfile: false,});
     const toggleMenu = (menuName) => {
         setExpandedMenus((prev) => ({
             ...prev, [menuName]: !prev[menuName]
@@ -20,6 +20,7 @@ const SideMenu = () => {
     };
 
     return (<nav className="side-menu">
+
         <ul>
             <li>
                 {/*Programação*/}
@@ -182,7 +183,7 @@ const SideMenu = () => {
                     </ul>)}
                 </div>
 
-                {/*Suporte*/}
+                {/*UserProfile*/}
                 <div className="expandable-menu">
                     <div onClick={() => toggleMenu('support')} className="expandable-menu-header">
                         <MdOutlineSupportAgent
@@ -212,6 +213,36 @@ const SideMenu = () => {
                             </NavLink>
                         </li>
                     </ul>)}
+                </div>
+                <div className="expandable-menu">
+                    <div
+                        onClick={() => toggleMenu('userProfile')}
+                        className="expandable-menu-header"
+                    >
+                        <FaUserCircle
+                            className={`icon-expandable ${expandedMenus.userProfile ? 'active' : ''}`}
+                        />
+                        <span className="span-title">Perfil do Usuário</span>
+                        {expandedMenus.userProfile ? (
+                            <RiArrowUpSLine className="arrow-icon"/>
+                        ) : (
+                            <RiArrowDownSLine className="arrow-icon"/>
+                        )}
+                    </div>
+                    {expandedMenus.userProfile && (
+                        <ul className="expanded-menu">
+                            <li>
+                                <NavLink
+                                    to="/dashboard/user-profile"
+                                    className={({isActive}) => (isActive ? 'active' : '')}
+                                >
+                                    <MdManageAccounts className="icon"/>
+                                    <span>Detalhes da Conta</span>
+                                </NavLink>
+                            </li>
+                            {/* Add more user profile related links here if needed */}
+                        </ul>
+                    )}
                 </div>
             </li>
         </ul>

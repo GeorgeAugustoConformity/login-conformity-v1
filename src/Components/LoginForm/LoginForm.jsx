@@ -1,7 +1,7 @@
 // src/Components/LoginForm/LoginForm.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext'; // Import the AuthContext
+import { useAuth } from '../../context/AuthContext';
 import { FaUser, FaLock } from "react-icons/fa";
 import logo from '../../Components/Assets/login-logo-white.png';
 import './LoginForm.css';
@@ -9,15 +9,14 @@ import './LoginForm.css';
 const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { login } = useAuth(); // Destructure the login function from AuthContext
+    const { login } = useAuth();
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulate authentication check
         if (username === 'nanda' && password === 'nanda') {
-            login(); // Set authentication state to true
-            navigate('/dashboard/home'); // Redirect to dashboard
+            login();
+            navigate('/dashboard/home');
         } else {
             alert('Invalid credentials');
         }

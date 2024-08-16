@@ -1,35 +1,37 @@
+// src/components/ContextMenu/ContextMenu.js
+
 import React from 'react';
-import './ContextMenu.css'; // Import the CSS for styling
+import './ContextMenu.css';
 
-const ContextMenu = ({items, position, visible, onClose}) => {
-    React.useEffect(() => {
-        const handleClick = (e) => {
-            if (visible && !e.target.closest('.context-menu')) {
-                onClose();
-            }
-        };
-
-        document.addEventListener('click', handleClick);
-        return () => document.removeEventListener('click', handleClick);
-    }, [visible, onClose]);
-
+const ContextMenu = ({ items, position, visible, onClose }) => {
     if (!visible) return null;
 
+    const handleClick = (e) => {
+        e.stopPropagation(); // Prevent the click event from bubbling up
+    };
+
     return (
-        <div className="context-menu" style={{top: position.y, left: position.x}}>
-            {items.map((item, index) => (
-                <div
-                    key={index}
-                    className="context-menu-item"
-                    onClick={() => {
+        <>
+            <div
+                className="context-menu-overlay"
+                onClick={onClose}
+            />
+            <div
+                className="context-menu"
+                style={{ top: position.y, left: position.x, position: 'absolute' }}
+                onClick={handleClick}
+            >
+                {items.map((item, index) => (
+                    <div key={index} className="context-menu-item" onClick={() => {
                         item.onClick();
-                        onClose();
-                    }}
-                >
-                    {item.label}
-                </div>
-            ))}
-        </div>
+                        onClose(); // Hide menu after item click
+                    }}>
+                        {item.icon}
+                        <span>{item.label}</span>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 

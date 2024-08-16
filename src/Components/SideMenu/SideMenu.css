@@ -3,22 +3,22 @@
     width: 200px;
     background-color: var(--background-color); /* Background color */
     height: 100vh;
-    padding-top: 19px;
+    padding-top: 1em;
+    padding-bottom: 2em;
     position: fixed;
-    top: 3.75em;
+    top: 5.4em;
     left: 0;
     z-index: 1;
-    border-right: 1px solid #1a1a1a; /* Original border color */
+    border-right: 1px solid #1a1a1a; /* Border color */
     opacity: 80%;
     overflow-y: auto; /* Enable vertical scrolling */
-    /*scrollbar-width: thin; !* For Firefox *!*/
+    scrollbar-width: thin; /* For Firefox */
     scrollbar-color: var(--text-color) var(--background-color); /* For Firefox */
-    padding-bottom: 5em;
 }
 
 /* Custom Scrollbar for Webkit Browsers */
 .side-menu::-webkit-scrollbar {
-    /*width: 8px;*/
+    width: 8px; /* Width of the scrollbar */
 }
 
 .side-menu::-webkit-scrollbar-thumb {
@@ -49,42 +49,33 @@
 
 /* Link Styling */
 .side-menu ul li a {
-    color: var(--text-color); /* Original link color */
+    /*color: var(--text-color); !* Default link color *!*/
     text-decoration: none;
     display: block;
-    /*font-size: 14px;*/
     padding: 10px 20px;
-    transition: 0.3s ease;
-    /*letter-spacing: -0.5px;*/
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Active Link Styling */
 .side-menu ul li a.active {
-    /*background-color: #445059; !* Original active link background color *!*/
-    color: #ffffff; /* Original active link text color */
+    background-color: #445059; /* Active link background color */
+    /*color: #ffffff; !* Active link text color *!*/
     padding-left: 25px;
 }
 
 /* Hover Effect for Active Link */
 .side-menu ul li a.active:hover {
-    color: #ffffff; /* Same color for hover effect to maintain consistency */
+    /*color: #ffffff; !* Maintain consistency with active link color *!*/
 }
 
 /* Hover Effect for Links */
 .side-menu ul li a:hover {
-    color: var(--text-color); /* Original hover color */
+    /*color: var(--text-color); !* Hover color *!*/
 }
 
 /* Icon Styling */
 .side-menu .icon {
-    /*color: var(--text-color);*/
-    transform: translateY(5px);
-    margin-bottom: 3px;
-    margin-right: 6px;
-}
-
-.side-menu .icon {
-    /*color: #222;*/
+    /*color: var(--icon-color); !* Icon color *!*/
     transform: translateY(5px);
     margin-bottom: 3px;
     margin-right: 6px;
@@ -101,10 +92,11 @@
     transition: background-color 0.3s ease;
 }
 
+/* Icon and Text Container */
 .icon-text-container {
     display: flex;
     align-items: center;
-    gap: .7em; /* This keeps the gap between icon and text */
+    gap: .7em; /* Gap between icon and text */
 }
 
 .arrow-icon {
@@ -137,20 +129,11 @@
 
 /* Expanded Menu Link Styling */
 .expanded-menu li a {
-    color: var(--gray-light); /* Default link color */
+    color: var(--text-color); /* Default link color */
     padding: 10px 20px;
     font-size: 13px;
     display: block;
-    transition: 0.3s ease;
-}
-
-.icon-expandable {
-    color: red;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.icon-expandable.active {
-    color: red; /* Red color when the menu is expanded */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Active Expanded Menu Link Styling */
@@ -161,10 +144,11 @@
 
 /* Hover Effect for Expanded Menu Links */
 .expanded-menu li a:hover {
-    /*color: #ffffff; !* Adjust color on hover *!*/
-    /*background-color: #2f4b6c; !* Background color on hover *!*/
+    color: #ffffff; /* Hover color */
+    background-color: #2f4b6c; /* Background color on hover */
 }
 
+/* Expandable Menu Title and Icon */
 .expandable-menu span {
     /*color: var(--text-color);*/
 }
@@ -173,10 +157,12 @@
     color: var(--text-color);
 }
 
-.expandable-menu span:active {
-    color: var(--text-color);
-}
-
 .expandable-menu .icon-expandable {
     color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active Expandable Icon Color */
+.expandable-menu .icon-expandable.active {
+    color: #1a59a4; /* Red color when the menu is expanded */
 }

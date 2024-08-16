@@ -1,0 +1,15 @@
+.datetime-display {
+    font-family: Arial, sans-serif;
+    text-align: right;
+    margin: 10px;
+}
+
+.date {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 1.2em;
+    color: gray;
+}

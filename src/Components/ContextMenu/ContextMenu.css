@@ -1,20 +1,36 @@
+/* src/components/ContextMenu/ContextMenu.css */
+
 .context-menu {
-    width: 200px;
-    position: absolute;
-    background-color: #c2c2c2;
+    background-color: var(--background-color);
     border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    padding: 5px;
+    z-index: 1000; /* Ensure the menu is on top */
+    min-width: 150px; /* Optional: Adjust as needed */
+    color: gray;
 }
 
 .context-menu-item {
-    padding: 5px 12px;
+    padding: 8px 12px;
     cursor: pointer;
-    user-select: none;
+    display: flex;
+    align-items: center;
 }
 
 .context-menu-item:hover {
     background-color: #f0f0f0;
+}
+
+.context-menu-item span {
+    margin-left: 8px;
+}
+
+.context-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    z-index: 999; /* Ensure the overlay is just below the menu */
 }

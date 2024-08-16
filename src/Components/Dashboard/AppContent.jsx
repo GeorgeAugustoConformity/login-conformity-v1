@@ -1,10 +1,8 @@
-// src/Components/AppContent/AppContent.js
-
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LoginForm from '../LoginForm/LoginForm';
 import Dashboard from '../Dashboard/Dashboard';
-import ProtectedRoute from './ProtectedRoute'; // Adjust import path as needed
+import ProtectedRoute from '../Dashboard/ProtectedRoute';
 
 const AppContent = () => {
     return (
@@ -17,6 +15,6 @@ const AppContent = () => {
             } />
         </Routes>
     );
-}
+};
 
 export default AppContent;

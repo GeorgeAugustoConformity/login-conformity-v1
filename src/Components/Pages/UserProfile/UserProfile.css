@@ -1,0 +1,52 @@
+.profile {
+    padding: 20px;
+    /*background-color: rgba(255, 255, 255, 0.2); !* Transparent background for blur effect *!*/
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Slightly more opaque border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Depth shadow */
+    max-width: 400px; /* Width of the card */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    -webkit-backdrop-filter: blur(10px); /* Vendor prefix for Safari */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background to enhance the blur effect */
+    color: #e8e8e8; /* Ensure text color is consistent */
+    margin-left: 12em;
+    margin-top: 5em;
+}
+
+/* Profile Header Styling */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.profile-image {
+    width: 120px; /* Adjusted size for better visibility */
+    height: 120px; /* Adjusted size for better visibility */
+    border-radius: 50%;
+    margin-right: 20px; /* Space between image and text */
+    object-fit: cover; /* Ensures image fits within the circle */
+    border: 3px solid #2f4b6c; /* Border around the image for emphasis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the image */
+}
+
+/* Profile Information Styling */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 24px; /* Increased font size for emphasis */
+}
+
+.profile-info p {
+    margin: 5px 0; /* Add vertical spacing between paragraphs */
+    font-size: 16px; /* Adjusted font size for better readability */
+    color: #cecece;
+}
+
+.profile-info strong {
+    font-weight: bold;
+}
